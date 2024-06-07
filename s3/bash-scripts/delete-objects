@@ -1,0 +1,35 @@
+#! /usr/bin/env bash
+echo "== delete objects"
+
+# Exit immediately if any command returns a non-zero status
+set -e
+
+# Check for bucket name
+if [ -z "$1" ]; then
+    echo "No bucket name provided."
+    echo "./delete-objects <bucket-name>"
+    exit 1
+fi
+
+BUCKET_NAME=$1
+
+# Get the list of all objects in the bucket
+OBJECTS=$(aws s3api list-objects-v2 --bucket "$BUCKET_NAME" --query 'Contents[].{Key: Key}' --output json)
+
+# Check if the bucket is empty
+if [ "$OBJECTS" == "null" ] || [ "$OBJECTS" == "[]" ]; then
+    echo "Nothing to delete in bucket $BUCKET_NAME."
+    exit 0
+fi
+
+# Parse the JSON and delete each object
+echo "$OBJECTS" | jq -r '.[].Key' | while read key; do
+    echo "Deleting $key from $BUCKET_NAME"
+
+    # https://docs.aws.amazon.com/cli/latest/reference/s3api/delete-objects.html
+    aws s3api delete-object --bucket "$BUCKET_NAME" --key "$key"
+done
+
+echo "All objects deleted from $BUCKET_NAME."
+
+

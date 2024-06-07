@@ -1,13 +1,18 @@
 #! /usr/bin/env bash
 echo "== delete bucket"
 
-# Check if 1 argument is provided
+# Exit immediately if any command returns a non-zero status
+set -e
+
+# Check for bucket name
 if [ -z "$1" ]; then
     echo "No bucket name provided."
     echo "./delete-bucket <bucket-name>"
     exit 1
 fi
 
+BUCKET_NAME=$1
+
 # https://docs.aws.amazon.com/cli/latest/reference/s3api/delete-bucket.html
 aws s3api delete-bucket \
---bucket $1 \
+--bucket $BUCKET_NAME \

@@ -1,2 +1,28 @@
 #! /usr/bin/env bash
 echo "== list objects"
+
+# Exit immediately if any command returns a non-zero status
+set -e
+
+# Check for bucket name
+if [ -z "$1" ]; then
+    echo "Usage:"
+    echo "./list-objects <bucket-name>"
+    exit 1
+fi 
+
+BUCKET_NAME=$1
+
+# Get the list of all objects in the bucket
+# https://docs.aws.amazon.com/cli/latest/reference/s3api/list-objects-v2.html
+OBJECTS=$(aws s3api list-objects-v2 --bucket "$BUCKET_NAME" --query 'Contents[].{Key: Key}' --output json)
+
+# Check if the bucket is empty
+if [ "$OBJECTS" == "null" ] || [ "$OBJECTS" == "[]" ]; then
+    echo "No objects in bucket $BUCKET_NAME."
+    exit 0
+fi
+
+# Parse the JSON and list the objects
+echo "Objects in bucket $BUCKET_NAME:"
+echo "$OBJECTS" | jq -r '.[]'
