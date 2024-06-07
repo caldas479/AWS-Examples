@@ -15,5 +15,5 @@ It consists of:
 - Version ID
 - Metadata as can attach additional info
 
-S3 bucket -> hold objects, can also have folders. Their name must be unique as S3 is a universal namespace.
+S3 bucket -> hold objects, can also have *folders. Their name must be unique as S3 is a universal namespace.
 
