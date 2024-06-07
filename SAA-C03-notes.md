@@ -2,7 +2,7 @@
 
 ## S3
 
-Object Storage -> data storage architecture that manages data as objects, as opposed to other architectures.
+Object Storage is a data storage architecture that manages data as objects, as opposed to other architectures.
 
 - S3 provides *unlimited storage;
 - serverless service;
