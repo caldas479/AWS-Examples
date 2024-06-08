@@ -1,0 +1,10 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+# gem "rails"
+# https://aws.amazon.com/sdk-for-ruby/
+# https://docs.aws.amazon.com/sdk-for-ruby/v3/api/Aws/S3.html
+gem 'aws-sdk-s3'
+gem 'pry' # debug
+gem 'nokogiri' # parse from internet
