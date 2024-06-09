@@ -3,6 +3,8 @@ tasks:
   - name: utils
     before: |
       sudo apt-get install tree
+
+  # https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
   - name: terraform
     before: |
       sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
@@ -11,7 +13,7 @@ tasks:
       echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
       sudo apt update
       sudo apt-get install terraform
-  
+
   # https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu?view=powershell-7.4
   # https://docs.aws.amazon.com/powershell/latest/userguide/pstools-getting-set-up-linux-mac.html
   - name: powershell
@@ -27,6 +29,7 @@ tasks:
       #pwsh 
       #Install-Module -Name AWS.Tools.Installer
       #Install-AWSToolsModule AWS.Tools.S3 -CleanUp
+      
   - name: aws-cli
     env : 
       AWS_CLI_AUTO_PROMPT: on-partial
