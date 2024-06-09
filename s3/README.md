@@ -77,8 +77,8 @@ Terraform is an open-source Infrastructure as Code (IaC) tool created by HashiCo
 
 In this folder, you will find Terraform scripts to manage S3 resources:
 
-- `main.tf`: Main Terraform configuration file for defining S3 resources.
-- `provider.tf`: File to configure the AWS provider for Terraform.
+- `main.tf`: configures the Terraform provider and creates a VPC.
+- `s3.tf`: defines the S3 bucket resource.
 
 
 ---
