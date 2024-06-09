@@ -1,0 +1,10 @@
+name: s3-simple-cdk
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: A python project for AWS S3
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python
