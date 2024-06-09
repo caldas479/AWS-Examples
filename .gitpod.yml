@@ -4,6 +4,11 @@ tasks:
     before: |
       sudo apt-get install tree
 
+  # https://github.com/aws/aws-cdk?tab=readme-ov-file#getting-started
+  - name: cdk 
+    before: |
+      npm i -g aws-cdk
+
   # https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
   - name: terraform
     before: |

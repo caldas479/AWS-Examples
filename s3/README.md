@@ -81,6 +81,16 @@ In this folder, you will find Terraform scripts to manage S3 resources:
 - `s3.tf`: defines the S3 bucket resource.
 
 
+### Cloud Development Kit
+
+The AWS Cloud Development Kit (AWS CDK) is an open-source software development framework for defining cloud infrastructure in code and provisioning it through AWS CloudFormation.
+
+The AWS CDK consists of two primary parts:
+
+- AWS CDK Construct Library – A collection of pre-written modular and reusable pieces of code, called constructs, that you can use, modify, and integrate to develop your infrastructure quickly. The goal of the AWS CDK Construct Library is to reduce the complexity required to define and integrate AWS services together when building applications on AWS.
+
+- AWS CDK Toolkit – A command line tool for interacting with CDK apps. Use the AWS CDK Toolkit to create, manage, and deploy your AWS CDK projects.
+
 ---
 
 Feel free to explore each folder and file to get a deeper understanding of how to interact with AWS S3 using different tools and languages. Happy learning!
