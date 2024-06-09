@@ -4,7 +4,6 @@
 
 This repository contains various scripts and code examples to help you understand and interact with AWS S3 using different tools and languages. It includes Bash scripts, PowerShell scripts, SDK examples in Java and Ruby, and Infrastructure as Code (IaC) using AWS CloudFormation.
 
-
 ## Introduction to S3
 
 Object Storage is a data storage architecture that manages data as objects, as opposed to other architectures.
@@ -80,7 +79,6 @@ In this folder, you will find Terraform scripts to manage S3 resources:
 - `main.tf`: configures the Terraform provider and creates a VPC.
 - `s3.tf`: defines the S3 bucket resource.
 
-
 ### Cloud Development Kit
 
 The AWS Cloud Development Kit (AWS CDK) is an open-source software development framework for defining cloud infrastructure in code and provisioning it through AWS CloudFormation.
@@ -90,6 +88,12 @@ The AWS CDK consists of two primary parts:
 - AWS CDK Construct Library – A collection of pre-written modular and reusable pieces of code, called constructs, that you can use, modify, and integrate to develop your infrastructure quickly. The goal of the AWS CDK Construct Library is to reduce the complexity required to define and integrate AWS services together when building applications on AWS.
 
 - AWS CDK Toolkit – A command line tool for interacting with CDK apps. Use the AWS CDK Toolkit to create, manage, and deploy your AWS CDK projects.
+
+### Pulumi
+
+Pulumi is an infrastructure as code platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.
+
+Pulumi is free, open source, and optionally pairs with the Pulumi Cloud to make managing infrastructure secure, reliable, and hassle-free.
 
 ---
 
