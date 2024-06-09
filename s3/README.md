@@ -71,6 +71,16 @@ This folder contains CloudFormation scripts. AWS CloudFormation is a service tha
 - `deploy`: Script to deploy a CloudFormation stack.
 - `template.yaml`: CloudFormation template defining S3 resources to be created.
 
+### Terraform
+
+Terraform is an open-source Infrastructure as Code (IaC) tool created by HashiCorp. It allows you to define and provision infrastructure using a high-level configuration language called HashiCorp Configuration Language (HCL) or JSON. Terraform is cloud-agnostic, enabling you to manage infrastructure across multiple cloud providers and services.
+
+In this folder, you will find Terraform scripts to manage S3 resources:
+
+- `main.tf`: Main Terraform configuration file for defining S3 resources.
+- `provider.tf`: File to configure the AWS provider for Terraform.
+
+
 ---
 
 Feel free to explore each folder and file to get a deeper understanding of how to interact with AWS S3 using different tools and languages. Happy learning!
