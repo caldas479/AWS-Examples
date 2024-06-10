@@ -21,6 +21,66 @@ It consists of:
 
 S3 bucket -> hold objects, can also have "folders". Their name must be unique as S3 is a universal namespace.
 
+## S3 Bucket
+
+### Naming Rules
+- Length: 3-63 chars long.
+- Chars: no uppercase, no underscores, no spaces.
+- Start and end with letter or number.
+- Can't be formatted as IP addresses.
+- Can't start with "xn--", "sthree-" or "sthree-configurator".
+- Can't end with "-s3alias" or "--ol-s3", reserved for ap alias names.
+- Must be uniquea across all AWS accounts and AWS Regions within a partition.
+- S3 Transfer accleration can't have dots in their names.
+
+Examples
+
+Valid:
+
+´´´sh
+mybucket-123
+log-bucket
+´´´
+
+Invalid:
+
+´´´sh
+123.456.789.012
+My-Bucket
+data.bucket..archive
+xn--bucketname
+bucket_name
+sthree-config-bucket
+my-bucket-s3alias
+´´´
+
+### Restrictions and Limitations
+
+- By default you can create 100 buckets, but you can create a service a request to increase to 1000 buckets.
+- Need to empty bucket before deletion.
+- Files between 0 and 5 TBs. Larger than 100MB should use multi-part upload.
+- Get, Put, List, Delete designed for high availability.
+
+### Types
+
+AWS S3 has two types of buckets.
+
+1. General pupose buckets:
+   - Organizes data in a flat hierarchy;
+   - Original S3 type;
+   - Recommended for most cases;
+   - Used with all storage classes except S3 Express One Zone;
+   - No prefix limits;
+   - Limit of 100 per account.
+
+2. Directory buckets:
+   - Organizes data in a folder hierarchy;
+   - Only used with S3 Express One Zone;
+   - Recommended when you need single-digit milisec performance on PUT and GET;
+   - Individual directories can scale horizontally;
+   - No prefix limits;
+   - Limit 10 directory buckets per account.
+  
 ## Bash Scripting
 
 Bash scripts are powerful tools for automating repetitive tasks in Unix-based systems. In this folder, you'll find scripts to manage S3 buckets and objects using the AWS CLI.
