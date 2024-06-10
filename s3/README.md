@@ -37,14 +37,14 @@ Examples
 
 Valid:
 
-´´´sh
+```
 mybucket-123
 log-bucket
-´´´
+```
 
 Invalid:
 
-´´´sh
+```
 123.456.789.012
 My-Bucket
 data.bucket..archive
@@ -52,7 +52,7 @@ xn--bucketname
 bucket_name
 sthree-config-bucket
 my-bucket-s3alias
-´´´
+```
 
 ### Restrictions and Limitations
 
