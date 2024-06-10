@@ -33,16 +33,16 @@ S3 bucket -> hold objects, can also have "folders". Their name must be unique as
 - Must be uniquea across all AWS accounts and AWS Regions within a partition.
 - S3 Transfer accleration can't have dots in their names.
 
-Examples
+Examples:
 
-Valid:
+- Valid
 
 ```
 mybucket-123
 log-bucket
 ```
 
-Invalid:
+- Invalid
 
 ```
 123.456.789.012
