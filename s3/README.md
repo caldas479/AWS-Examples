@@ -81,6 +81,24 @@ AWS S3 has two types of buckets.
    - No prefix limits;
    - Limit 10 directory buckets per account.
   
+### S3 Folders
+
+S3 folders are zero-byte S3 objects with a name that ends in /
+- don't include metadata, permissions.
+- don't contain anything, they can't be full or empty.
+- aren't moved, just are renamed.
+
+### S3 Objects
+
+- ETags -> detect changes in the contents without download them. (MD5 or SHA-1)
+- Checksums -> ensure integrity of uploads or downloads.
+- Object prefixes -> simulates fs folders in a flat hierarchy.
+- Object metadata -> attach more info.
+- Object tags -> benefits resource tagging at the object level.
+- Object locking -> makes data files immutable.
+- Object Versioning -> multiple versions of a data file.
+
+
 ## Bash Scripting
 
 Bash scripts are powerful tools for automating repetitive tasks in Unix-based systems. In this folder, you'll find scripts to manage S3 buckets and objects using the AWS CLI.
