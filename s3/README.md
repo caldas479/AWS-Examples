@@ -91,7 +91,7 @@ S3 folders are zero-byte S3 objects with a name that ends in /
 ### S3 Objects
 
 - ETags -> detect changes in the contents without download them. (MD5 or SHA-1)
-- Checksums -> ensure integrity of uploads or downloads.
+- Checksums -> ensure integrity of uploads or downloads. (CRC32/SHA256..)
 - Object prefixes -> simulates fs folders in a flat hierarchy.
 - Object metadata -> attach more info.
 - Object tags -> benefits resource tagging at the object level.
