@@ -95,7 +95,7 @@ S3 folders are zero-byte S3 objects with a name that ends in /
 - Object prefixes -> simulates fs folders in a flat hierarchy.
 - Object metadata -> attach more info.
 - Object tags -> benefits resource tagging at the object level.
-- Object locking -> makes data files immutable.
+- Object locking -> makes data files immutable. only from aws api (CLI or SDK).
 - Object Versioning -> multiple versions of a data file.
 
 
