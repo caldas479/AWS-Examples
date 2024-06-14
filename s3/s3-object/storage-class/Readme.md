@@ -26,6 +26,14 @@ Each S3 storage class is designed to address different storage needs. They diffe
 - **Use Case**: Unknown or unpredictable access patterns, cost optimization.
 - **Cost**: Monitoring and automation fee in addition to storage and retrieval costs.
 
+### S3 Express One Zone
+
+- **Description**: For data that is accessed frequently but stored in a single Availability Zone. 10xfaster than standard.
+- **Durability**: 99.999999999% durability.
+- **Availability**: 99.5% availability.
+- **Use Case**: Frequently accessed data that does not require the availability and resilience of S3 Standard but still needs rapid access.
+- **Cost**: Lower storage cost compared to S3 Standard, suitable for data that can be easily recreated if lost.
+
 ### S3 Standard-IA (Infrequent Access)
 
 - **Description**: For data that is accessed less frequently but requires rapid access when needed.
