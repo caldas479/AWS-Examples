@@ -73,3 +73,12 @@ Each S3 storage class is designed to address different storage needs. They diffe
 - **Availability**: 99.9% availability.
 - **Use Case**: Long-term data retention, digital preservation, compliance archives.
 - **Cost**: Lowest storage cost, high retrieval cost, and long retrieval times (hours).
+
+### Example Scenarios:
+- **Frequently Accessed Data**: Use S3 Standard.
+- **Unpredictable Access Patterns**: Use S3 Intelligent-Tiering.
+- **Infrequently Accessed Data**: Use S3 Standard-IA or S3 One Zone-IA.
+- **Frequently Accessed Data in a Single Availability Zone**: Use S3 Express One Zone.
+- **Long-term Archival with Immediate Access**: Use S3 Glacier Instant Retrieval.
+- **Long-term Archival with Flexible Access**: Use S3 Glacier Flexible Retrieval.
+- **Long-term Archival with Rare Access**: Use S3 Glacier Deep Archive.
