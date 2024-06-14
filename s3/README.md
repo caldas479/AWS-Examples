@@ -21,6 +21,8 @@ It consists of:
 
 S3 bucket -> hold objects, can also have "folders". Their name must be unique as S3 is a universal namespace.
 
+aws s3 is high level way to interact with s3 buckets and objects while aws s3api is a low lebel way. aws s3control to manage ap, s3 ouposts buckets, batch operations and s3outposts for managing s3 outposts
+
 ## S3 Bucket
 
 ### Naming Rules
