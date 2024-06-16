@@ -51,3 +51,23 @@ In the following policy example, you explicitly deny DELETE Object permissions t
 ```sh
 aws s3api put-bucket-policy --bucket pol-exe-tc123 --policy file://bucket-policy.json
 ```
+
+# S3 bucket policy vs IAM policy
+https://aws.amazon.com/blogs/security/iam-policies-and-bucket-policies-and-acls-oh-my-controlling-access-to-s3-resources/
+
+## Use IAM Policies if:
+- You need to control access to multiple AWS services, not just S3.
+- You have many S3 buckets with different permission requirements.
+- You prefer managing permissions centrally in IAM.
+
+## Use S3 Bucket Policies if:
+- You want to easily grant cross-account access without using IAM roles.
+- Your IAM policies are hitting size limits (2 KB for users, 5 KB for groups, 10 KB for roles), as S3 bucket policies support up to 20 KB.
+- You prefer managing permissions within the S3 environment.
+- You need to apply security controls like IP or VPC restrictions directly to the S3 bucket.
+
+## Considerations:
+- Use IAM policies to answer “What can this user do in AWS?”
+- Use S3 bucket policies to answer “Who can access this S3 bucket?”
+
+**Recommendation:** Stay as consistent as possible to simplify auditing permissions.
