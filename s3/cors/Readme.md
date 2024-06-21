@@ -22,3 +22,11 @@ aws s3api put-bucket-policy --bucket cors-exe-tc123 --policy file://bucket-polic
 ```sh
 aws s3api put-bucket-website --bucket cors-exe-tc123 --website-configuration file://website.json
 ```
+
+## Upload indext.html to bucket 
+```sh
+aws s3 cp index.html s3://cors-exe-tc123
+```
+
+## View the website 
+http://cors-exe-tc123.s3-website-us-east-1.amazonaws.com
