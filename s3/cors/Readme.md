@@ -28,5 +28,23 @@ aws s3api put-bucket-website --bucket cors-exe-tc123 --website-configuration fil
 aws s3 cp index.html s3://cors-exe-tc123
 ```
 
-## View the website 
+## Upload js file to bucket 
+```sh
+aws s3 cp hello.js s3://cors-exe-tc123
+```
+
+## Create API Gateway with mock response and then test the endpoint
+```sh
+curl -X POST -H "Content-Type: application/json" https://ig1z0e5nn2.execute-api.eu-west-1.amazonaws.com/prod/hello
+```
+
+## View the website and check for the cors error
+http://cors-exe-tc123.s3-website-us-east-1.amazonaws.com
+
+## Set cors on bucket
+```sh
+aws s3api put-bucket-cors --bucket cors-exe-tc123 --cors-configuration file://cors-configuration.json
+```
+
+## View the website and check error no longer exists
 http://cors-exe-tc123.s3-website-us-east-1.amazonaws.com

@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test S3 Website</title>
+    <title>Test 1 S3 Website</title>
 </head>
 <body>
-    <h1>Hello, S3!</h1>
+    <h1>Hello 1, S3!</h1>
+    <script type="text/javascript" >
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://ig1z0e5nn2.execute-api.eu-west-1.amazonaws.com/prod/hello", true);
+
+        // Send the proper header information along with the request
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = () => {
+        // Call a function when the state changes.
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                // Request finished. Do processing here.
+                const res = JSON.parse(xhr.responseText);
+                console.log('res','res');
+            }
+        };
+        xhr.send();
+    </script>
 </body>
 </html>
