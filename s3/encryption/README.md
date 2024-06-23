@@ -34,3 +34,8 @@ To configure server-side encryption, see:
 You encrypt your data client-side and upload the encrypted data to Amazon S3. In this case, you manage the encryption process, encryption keys, and related tools.
 
 To configure client-side encryption, see [Protecting data by using client-side encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html).
+
+```sh
+1. Create bucket
+2. bundle exec ruby client-side-encryption.rb
+```
