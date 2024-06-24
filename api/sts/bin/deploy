@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+TEMPLATE_FILE="template.yaml"
+REGION="eu-west-1"
+STACK_NAME="sts-stack-exe-tc123"
+
+aws cloudformation deploy \
+--template-file $TEMPLATE_FILE \
+--region $REGION \
+--stack-name $STACK_NAME \
+--capabilities CAPABILITY_IAM
