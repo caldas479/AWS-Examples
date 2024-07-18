@@ -38,3 +38,6 @@ A flow log captures information about the IP traffic going to and from network i
 
 ### VPN Connections
 Connect your VPCs to your on-premises networks using AWS Virtual Private Network (AWS VPN).
+
+### NACLS
+A network access control list (ACL) act as a virtual firewall, thus allows or denies specific inbound or outbound traffic at the subnet level. You can use the default network ACL for your VPC, or you can create a custom network ACL for your VPC with rules that are similar to the rules for your security groups in order to add an additional layer of security to your VPC.
